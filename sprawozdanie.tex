@@ -1,7 +1,13 @@
-\documentclass{article}
+\documentclass[fleqn]{article}
 
 \usepackage{polski}
 \usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage[margin=2cm]{geometry}
+
+\renewcommand{\baselinestretch}{1.5}
+\pagenumbering{arabic}
+\pagestyle{plain}
 
 \title{Sprawozdanie z pracowni rotacyjnej}
 \author{Jakub Bożek}
@@ -27,13 +33,67 @@
 
 
 \section{Entropia}
-    Entropia jest to funkcja stanu określająca kierunek przebiegu procesów spontanicznych.
+    Entropia jest to funkcja stanu określająca kierunek przebiegu procesów spontanicznych. Kierunek, który będzie zwrócony w stronę
+    przypadku dla którego wartość entropii jest najwyższa.
     Jest miarą stopnia nieuporządkowania układu.
 
     Żeby lepiej zrozumieć czym jest entropia można wziąć na przykład rzut kością 6-ścienną.
-    Każdy rzut można określić jako mikrostan, jeśli rzucimy nią 10 razy będziemy mieli jeden makrostan zawierający
-    10 mikrostanów.
+    Rzucamy nią 10 razy i liczymy ilość otrzymanych szóstek(0-10).
 
-    Z kombinatoryki wiemy, że aby policzyć ilość możliwych makrostanów należy podnieść liczbę możliwych mikrostanów(6)
-    do potęgi określanej przez ilość rzutów(10). $6^{10} = 60,466,176$, tyle wynosi liczba 
+    Możliwość wyrzucenia określonej ilości szóstek wygląda następująco:
+
+    \begin{align*}
+        0: \binom{10}{0} &=1\\
+        1: \binom{10}{1} &= 10\\
+        \vdots&\\
+        4: \binom{10}{4} &= 210\\
+        5: \binom{10}{5} &= 252\\
+        6: \binom{10}{6} &= 210\\
+        \vdots&\\
+        9: \binom{10}{9} &= 10\\
+        10: \binom{10}{10} &= 1
+    \end{align*}
+
+    Tutaj należałoby wprowadzić pojęcie mikro- i makrostanu. Makrostan określa skutek, w naszym przypadku ilość wyrzuconych szóstek.
+    Składa się on z mikrostanów, które są opisem w jaki sposób dany makrostan został uzyskany. \\ \\
+    \noindent \begin{large}Przykład:\end{large}  \\
+
+    Aby uzyskać makrostan 10, musiałby on się składać z następujących mikrostanów: \\
+    $[(6,6,6,6,6,6,6,6,6,6)]$.\\
+    Jak widać jest tylko 1 taka możliwość. Jednak w przypadku makrostanu 9, mogłoby to wyglądać następująco:\\
+    $[(1,6,6,6,6,6,6,6,6,6), (6,1,6,6,6,6,6,6,6,6),\\ \dots,\\(6,6,6,6,6,6,6,6,1,6), (6,6,6,6,6,6,6,6,6,1)]$. \\
+    Mamy 10 takich możliwości.
+
+    Pytanie tylko jakie to ma znaczenie względem prawdopodobieństwa?
+    Otóż wszystkich możliwości wystąpienia stanu mamy $2^{10}=1024$. W takim razie prawdopodobieństwo
+    wystąpienia 5 szóstek wynosi $\frac{252}{1024}*100 \% \approx 24.61\%$. I jest to najwyższa wartość.
+
+    Jeśliby się nad tym zastanowić jest to dość intuicyjne, że wartość środkowa jest wartością o najwyższym prawdopodobieństwie
+    wystąpienia.
+
+    W tym przypadku nasza intuicja jest zgodna z rzeczywistością, na co dodatkowym dowodem jest wyznaczenie
+    wartości oczekiwanej ze wzoru $E[X] = \sum_{i=0}^{n=10} x_i * p_i$. Z czego $p_i$ jest prawdopodobieństwem wyrzucenia
+    naszej wartości określoną ilość razy. $x_i$ to liczba określająca dany makrostan(0-10). W naszym przypadku $x_i = i$, 
+    uproszczając więc nasze równanie: $E[X] = \sum_{i=0}^{n=10} i*p_i$. 
+
+    Po podstawieniu naszych wartości wychodzi nam rzeczywiście 5.
+
+    Wiedząc już, że rzucając kością najbardziej prawdopodobne jest wyrzucenie szóstki 5 razy możemy połączyć to w końcu
+    z pojęciem entropii.
+
+    Entropia Boltzmanna określana jest wzorem: $S = k*\log{W}$
+
+    \begin{align*}
+        S &= \text{entropia}\\
+        k &= \text{stała Boltzmanna = $\frac{R}{N_A}$}\\
+        W &= \text{liczba możliwości wystąpienia makrostanu}\\
+    \end{align*}
+
+    jako, że $k>0$ oraz znając jak działa funkcja $\log$, wiemy, że im większa ilość makrostanów tym wyższa wartość
+    entropii.
+
+    Cofnijmy się teraz do początku tej sekcji, \textit{"Kierunek, który będzie zwrócony w stronę
+    przypadku dla którego wartość entropii jest najwyższa."}. Tym sposobem, korzystając z prostej probabilistyki
+    udowodniliśmy prawdziwość podejścia entropicznego do znajdywania najbardziej prawdopodobnego wydarzenia.
+
 \end{document}
