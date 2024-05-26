@@ -1,2 +1,5 @@
 \contentsline {section}{\numberline {1}Wprowadzenie}{2}{}%
 \contentsline {section}{\numberline {2}Entropia}{2}{}%
+\contentsline {section}{\numberline {3}Typy impulsów wzbudzających atom}{4}{}%
+\contentsline {subsection}{\numberline {3.1}Impuls prostokątny}{4}{}%
+\contentsline {subsection}{\numberline {3.2}Impuls rosnący wykładniczy}{4}{}%
