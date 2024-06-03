@@ -7,6 +7,8 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{hyperref}
+\usepackage{xcolor}
+%\usepackage{braket}
 \graphicspath{ {./graphics/} }
 \hypersetup{
     colorlinks=true,
@@ -32,23 +34,24 @@
 
 
 \section{Wprowadzenie}
-    Na zajęciach z pracowni rotacyjnej u dr. Anity Dąbrowskiej
-     chronologia pojęć wyglądała następująco:\\
+    Podczas zajęć z pracowni rotacyjnej u dr. Anity Dąbrowskiej
+    pojęcia zostały wprowadzone w następującej kolejności:\\
     \begin{enumerate}
         \item entropia
         \item typy impulsów wzbudzających atom
-        \item prawdopodobieństwo wzbudzenia atomu/wystąpienia elektronu dla impulsów
+        \item prawdopodobieństwo wzbudzenia atomu dla różnego typu impulsów
+        \item maksymalne prawdopodobieństwa wzbudzenia atomu dla różnych typów impulsów
         \item entropia na przykładzie powyższych prawdopodobieństw
-        \item \dots
+        \item splątanie kwantowe
     \end{enumerate}
 
 
 \section{Entropia}
-    Entropia jest to funkcja stanu określająca kierunek przebiegu procesów spontanicznych. Kierunek, który będzie zwrócony w stronę
-    przypadku dla którego wartość entropii jest najwyższa.
-    Jest miarą stopnia nieuporządkowania układu.
+    Entropia jest funkcją stanu określającą kierunek przebiegu procesów spontanicznych. Będzie on zwrócony w stronę
+    przypadku, dla którego wartość entropii jest najwyższa.
+    Funkcja jest miarą stopnia nieuporządkowania układu.
 
-    Żeby lepiej zrozumieć czym jest entropia można wziąć na przykład rzut kością 6-ścienną.
+    Żeby lepiej zrozumieć czym jest entropia można wziąć jako przykład rzut kością 6-ścienną.
     Rzucamy nią 10 razy i liczymy ilość otrzymanych szóstek(0-10).
 
     Możliwość wyrzucenia określonej ilości szóstek wygląda następująco:
@@ -87,12 +90,12 @@
     naszej wartości określoną ilość razy. $x_i$ to liczba określająca dany makrostan(0-10). W naszym przypadku $x_i = i$, 
     uproszczając więc nasze równanie: $E[X] = \sum_{i=0}^{n=10} i*p_i$. 
 
-    Po podstawieniu naszych wartości wychodzi nam rzeczywiście 5.
+    Po podstawieniu naszych wartości rzeczywiście wychodzi nam 5.
 
-    Wiedząc już, że rzucając kością najbardziej prawdopodobne jest wyrzucenie szóstki 5 razy możemy połączyć to w końcu
+    Wiedząc już, że rzucając kością najbardziej prawdopodobne jest wyrzucenie szóstki 5 razy możemy to połączyć 
     z pojęciem entropii.
 
-    Entropia Boltzmanna określana jest wzorem: $S = k*\log{W}$
+    Entropia Boltzmanna określona jest wzorem: $S = k*\log{W}$
 
     \begin{align*}
         S &= \text{entropia}\\
@@ -100,21 +103,21 @@
         W &= \text{liczba możliwości wystąpienia makrostanu}
     \end{align*}
 
-    jako, że $k>0$ oraz wiedząc jak działa funkcja $\log$, wiemy, że im wyższa ilość makrostanów tym wyższa wartość
+    jako, że $k>0$ oraz wiedząc jak działa funkcja $\log$, wiemy, że im większa ilość makrostanów tym wyższa wartość
     entropii.
 
-    Cofnijmy się teraz do początku tej sekcji, \textit{"Kierunek, który będzie zwrócony w stronę
-    przypadku dla którego wartość entropii jest najwyższa."}. Tym sposobem, korzystając z prostej probabilistyki
+    Cofnijmy się teraz do początku tej sekcji tzn. do pojęcia kierunku, który jest zwrócony w stronę
+    przypadku o najwyższej wartości entropii. Tym sposobem, korzystając z prostej probabilistyki
     udowodniliśmy prawdziwość podejścia entropicznego do znajdywania najbardziej prawdopodobnego wydarzenia.
 
 \section{Typy impulsów wzbudzających atom}
 
-    Wzbudzenie atomu to zmiana jego stanu energetycznego ze stanu podstawowego na stan wzbudzony.
+    Wzbudzeniem atomu nazywamy zmianę jego stanu energetycznego z podstawowego na wzbudzony.
 
-    Taka operacja może zostać przeprowadzona na wiele sposobów m.in. ciepło, napięcie elektryczne oraz światło.
+    Taka operacja może zostać przeprowadzona pod wpływem np. ciepła, napięcia elektrycznego lub światła.
     Nas interesować będzie ta ostatnia.
 
-    Typów impulsów świetlnych używanych do wzbudzenia atomu jest wiele, my przedstawimy te, które opracowywaliśmy
+    Jest wiele typów impulsów świetlnych używanych do wzbudzenia atomu. W poniższej części sprawozdania przedstawimy te, które opracowywaliśmy
     na zajęciach z pracowni rotacyjnej.
 
     \subsection{Impuls prostokątny}
@@ -136,7 +139,7 @@
 
         Jak widać jest to prostokąt, zaczynający się w $t_0=0$ i kończący się w $t=\frac{2}{\Omega}$.
 
-        Ten typ impulsu zwiększa swoją wartość wraz ze zwiększającą się $\Omega$ jednak trwa on krócej.
+        Ten typ impulsu zwiększa swoją wartość wraz ze zwiększającą się $\Omega$, jednak trwa on krócej.
 
     \subsection{Impuls rosnący wykładniczy}
 
@@ -154,8 +157,8 @@
             \caption{Wykres impulsu rosnącego wykładniczego względem czasu, dla różnej wartości $\Omega$.}
         \end{figure}
 
-        Impuls rosnący wykładniczy rośnie wykładniczo od $-\inf$ do $t_0 = 0$ wyłącznie.
-        Im wyższa wartość $\Omega$ tym wyższe tempo wzrostu jednak zaczyna się ono później.
+        Impuls rosnący wykładniczy rośnie wykładniczo od $-\infty$ do $t_0 = 0$ wyłącznie.
+        Im wyższa wartość $\Omega$ tym wyższe tempo wzrostu, jednak jego przyrost zaczyna się później.
 
     \subsection{Impuls malejący wykładniczy}
 
@@ -174,7 +177,7 @@
         \end{figure}
 
         Impuls malejący wykładniczy jest lustrzanym odbiciem impulsu rosnącego wykładniczego względem osi OY.
-        Tym samym będzie posiadał analogiczne cechy.
+        Tym samym będzie posiadał odwrotne własności.
 
     \subsection{Impuls gaussowski}
 
@@ -191,12 +194,12 @@
 
         Impuls gaussowski zawsze posiada swój szczyt(peak) w $t=0$.
         Cechą charakterystyczną jest symetryczność względem osi OY.
-        Dodatkowo im wyższa wartość $\Omega$ tym krótszy ale wyższy peak.
+        Dodatkowo im wyższa wartość $\Omega$ tym krótszy, ale wyższy peak.
 
 \section{Prawdopodobieństwo wzbudzenia atomu dla różnych typów impulsów}
     Różne typy impulsów będą miały różne właściwości wzbudzania atomów.
-    Możemy wyróżnić parę przypadków przejść stanów atomowych.
-    Jest to:
+    Możemy wyróżnić pary przypadków, w których następuje zmiana stanu wzbudzenia.
+    Są to:
     \begin{itemize}
         \item \textit{ground $\to$ ground}
         \item \textit{ground $\to$ excited}
@@ -270,15 +273,15 @@
             \caption{Wykres prawdopodobieństwa dla impulsu gaussowskiego względem czasu, dla różnej wartości $\Omega$.}
         \end{figure}
 
-    Całka z funkcji impulsu gaussowskiego jest jako jedyna z podanych niemożliwa do rozwiązania analitycznie.
+    Całka z funkcji impulsu gaussowskiego jako jedyna z podanych jest niemożliwa do rozwiązania analitycznie.
 
-    Na powyższych wykresach można zauważyć różniące się od siebie wartości $\Omega$. Nie jest to w żadnym przypadku błąd
+    Na powyższych wykresach można zauważyć różniące się od siebie wartości $\Omega$. Nie jest to w żadnym przypadku błąd,
     a celowe działanie. Niebieska krzywa pokazuje maksymalną wartość prawdopodobieństwa jaką dany impuls jest w stanie
     zaoferować. Pozostałe są jedynie referencją oraz wzbogacają intuicję czytelnika.
 
 \section{Maksymalne prawdopodobieństwa wzbudzenia atomu dla różnych typów impulsów}
 
-    Dodatkowo, można pokazać jak zmieniają się prawdopodobieństwa i dla jakiej wartości $\Omega$ osiągają
+    Dla podkreślenia można pokazać jak zmieniają się prawdopodobieństwa i dla jakiej wartości $\Omega$ osiągają
     swoją wartość maksymalną.
 
     \subsection{Maksymalne prawdopodobieństwo dla impulsu prostokątnego}
@@ -320,9 +323,9 @@
 
 \section{Entropia na przykładzie powyższych prawdopodobieństw}
 
-    Na samym początku wytłumaczyliśmy sobie na przykładzie czym jest entropia.
+    Na samym początku wytłumaczyliśmy sobie na przykładzie 6-ściennej kostki czym jest entropia.
     Następnie zobaczyliśmy różne typy impulsów wzbudzających atom oraz korespondujące z nimi wykresy
-    prawdopodobieństwa wzbudzenia go. W tym rozdziale postaram się połączyć te 2 rzeczy i następnie wytłumaczyć.
+    prawdopodobieństwa wzbudzenia go. W tym rozdziale postaramy się połączyć i wytłumaczyć te 2 rzeczy.
 
     W naszych obliczeniach entropii wykorzystywaliśmy wzór:
 
@@ -374,4 +377,143 @@
     w stanie podstawowym. Wracając do poprzedniego rodziału, prawdopodobieństwo wzbudzenia dla impulsu rosnącego wykładniczego
     wynosi 100\%. W odpowiadającym mu punkcie na wykresie entropii widzimy, że wartość wynosi 0. W momencie w którym jest możliwy
     tylko jeden stan w jakim może znajdować atom, nieuporządkowanie układu jest zerowe, logiczne.
+
+\section{Splątanie kwantowe}
+
+    Poprzednie rozdziały miały pokazać jak działają elementy związane ze splątaniem kwantowym.
+    W tym, znajdować się będą szczegółowe informację i czy mamy do czynienia ze splątaniem.
+
+    \subsection{Stany kwantowe}
+        Wyróżniamy 2 stany kwantowe - czysty oraz mieszany.
+
+        Stan czysty oznacza, że posiadamy pełną informację o badanym obiekcie kwantowym.
+        Warunkiem stanu czystego jest możliwość przedstawienia macierzy gęstości($\varrho$) w postaci
+        $|\varPsi \rangle \langle\varPsi|$.
+
+        Idąc tym tropem o stanie mieszanym nie posiadamy pełnej informacji oraz nie ma możliwości przedstawienia macierzy
+        gęstości za pomocą iloczynu wektorowego wektorów stanu.
+
+        Są jeszcze inne sposoby na sprawdzenie w jakim stanie znajduję się układ kwantowy.
+        
+        Można policzyć entropię układu, np. entropę von Neumanna, która opisywana jest wzorem:
+        \begin{equation}
+            S = -Tr(\varrho\ln(\varrho))
+        \end{equation}
+        gdzie $Tr(A) = \sum_{i}a_{ii}$.
+
+        Wzór ten da się przekształcić do
+        \begin{equation}
+            S = -\sum_{i}\lambda_i\ln\lambda_i
+        \end{equation}
+        gdzie $\lambda_i$ to wartości własne $\varrho$. 
+
+        Jeśli wynosi ona 0 to układ znajduję się w stanie czystym.
+
+        \subsubsection*{Przykład stanu czystego}
+            \def\psia{
+                \begin{bmatrix}
+                    1\\
+                    0
+                \end{bmatrix}
+            }
+            \def\psib{
+                \begin{bmatrix}
+                    a\\
+                    b
+                \end{bmatrix}
+            }
+            \def\psio{
+                \begin{bmatrix}
+                    a\\
+                    b\\
+                    0\\
+                    0
+                \end{bmatrix}
+            }
+            Niech $\psi_1 = \psia, \psi_2 = \psib$
+            \begin{equation}
+                \begin{split}
+                    |\psi\rangle &= |\psi_1\rangle \otimes |\psi_2\rangle\\                   
+                    \psi_1 \otimes \psi_2 &= \psio
+                \end{split}
+            \end{equation}    
+
+        \subsubsection*{Przykład stanu mieszanego}
+            \def\Pp{
+                \begin{bmatrix}
+                    1 & 0 & 0 & 1\\
+                    0 & 0 & 0 & 0\\
+                    0 & 0 & 0 & 0\\
+                    1 & 0 & 0 & 1
+                \end{bmatrix}
+            }
+            \begin{equation}
+                p^+ = \frac{1}{2}\Pp
+            \end{equation}
+            Nie da się tego stanu odseparować, jest to przykład stanu maksymalnie splątanego w $B(C^2) \sim B(C^4)$, który
+            jest przykładem stanu mieszanego. Jest on maksymalny ze względu na najwyższą entropię.
+            
+
+    \subsection{Separowalność stanu mieszanego}
+        Stany mieszane można podzielić na separowalne oraz nieseparowalne. Jeżeli stan układu jest nieseparowalny
+        oznacza, że jest on splątany. A skąd wiadomo, który stan jest separowalny, a który nie?
+        Warunkiem jest prawdziwość równania
+        \begin{equation}
+            \rho = \sum_{k}p_k \rho_1^k \otimes \rho_2^k
+        \end{equation}
+        gdzie $\sum_{k}p_k = 1$.
+
+    \subsection{Jak wykryć splątanie?}
+        \def\Ppr{
+            \begin{bmatrix}
+                1 & 0 & 0 & 0\\
+                0 & 0 & 1 & 0\\
+                0 & 1 & 0 & 0\\
+                0 & 0 & 0 & 1
+            \end{bmatrix}
+        }
+        Jesteśmy w stanie to zrobić za pomocą tak zwanych \textit{observable}, które jeżeli wykrywają splątanie,
+        stają się świadkami splątania.
+
+        Niech $p^+ = \frac{1}{2}\Pp$
+
+        \begin{equation}
+            \begin{split}
+                (id \otimes T) p^+ = \frac{1}{2}(id \otimes T) \sum_{i,j=1}^{2} e_{ij} \otimes e_{ij}=\\
+                =\frac{1}{2} \sum_{i,j=1}^{2} e_{ij} \otimes T(e_{ij}) = \frac{1}{2} \sum_{i,j=1}^{2} e_{ij} \otimes e_{ji}=\\
+                =\frac{1}{2} \Ppr < 0
+            \end{split}
+        \end{equation}
+        gdzie $id$ jest funkcją tożsamościową($id(x) = x$) oraz $T$ jest operacją transpozycji.
+
+    \subsection{Aktualne limity wykrywania splątania}
+        \def\Horo{
+            \begin{bmatrix}
+                1 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 1\\
+                0 & \varepsilon & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+                0 & 0 & \frac{1}{\varepsilon} & 0 & 0 & 0 & 0 & 0 & 0\\
+                0 & 0 & 0 & \varepsilon & 0 & 0 & 0 & 0 & 0\\
+                1 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 1\\
+                0 & 0 & 0 & 0 & 0 & \frac{1}{\varepsilon} & 0 & 0 & 0\\
+                0 & 0 & 0 & 0 & 0 & 0 & \frac{1}{\varepsilon} & 0 & 0\\
+                0 & 0 & 0 & 0 & 0 & 0 & 0 & \varepsilon & 0\\
+                1 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 1\\
+            \end{bmatrix}
+        }
+        Aktualnie jesteśmy w stanie wykryć splątanie dla każdego układu znajdującego się w przestrzeni Hilberta($\mathcal{H} = B(\mathcal{H}_A \otimes \mathcal{H}_B)$),
+        gdzie $\mathcal{H}_A, \mathcal{H}_B \in {C^2, C^3}$, jednak $\mathcal{H}_A$ i  $\mathcal{H}_B$ nie mogą jednocześnie być $C^3$. Dla innych układów również jesteśmy w stanie wykryć splątanie,
+        jednak istnieją przypadki, które wymykają się z dotychczas znanych zasad fizyki kwantowej. Przykładem takiego układu może być ten znaleziony przez panów Horodeckich i wygląda on następująco:
+        \begin{equation}
+            \varrho = \Horo
+        \end{equation}
+        gdzie $0 < \varepsilon \leq 1$.
+        Jest to układ gdzie $\varrho \in B(C^3 \otimes C^3)$. Warto również dodać, że jest to pierwszy taki układ w tej przestrzeni, dla którego udało
+        się wykryć splątanie.
+
+\section{Podziękowania}
+    \definecolor{green}{HTML}{075D0D}
+    Mimo, że to mogłoby być uznane za nieformalne chciałbym podziękować dr. Anicie Dąbrowskiej za czas poświęcony
+    na przygotowanie zbioru wiedzy oraz próbę przekazania jej nam podczas pracowni rotacyjnej. Dziękuję za dotrwanie do końca.
+    \\Redakcja i korekta: \color{green}{\textit{Karolina Klemenska}}
+
 \end{document}
