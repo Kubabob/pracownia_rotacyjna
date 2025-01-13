@@ -1,0 +1,28 @@
+\contentsline {section}{\numberline {1}Wprowadzenie}{3}{section.1}%
+\contentsline {section}{\numberline {2}Entropia}{3}{section.2}%
+\contentsline {section}{\numberline {3}Typy impulsów wzbudzających atom}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Impuls prostokątny}{5}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Impuls rosnący wykładniczy}{6}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Impuls malejący wykładniczy}{7}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Impuls gaussowski}{8}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Prawdopodobieństwo wzbudzenia atomu dla różnych typów impulsów}{9}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Prawdopodobieństwo dla impulsu prostokątnego}{10}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Prawdopodobieństwo dla impulsu rosnącego wykładniczego}{10}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Prawdopodobieństwo dla impulsu malejącego wykładniczego}{11}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Prawdopodobieństwo dla impulsu gaussowskiego}{12}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Maksymalne prawdopodobieństwa wzbudzenia atomu dla różnych typów impulsów}{13}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Maksymalne prawdopodobieństwo dla impulsu prostokątnego}{14}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Maksymalne prawdopodobieństwo dla impulsu rosnącego wykładniczego}{14}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Maksymalne prawdopodobieństwo dla impulsu malejącego wykładniczego}{15}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Maksymalne prawdopodobieństwo dla impulsu gaussowskiego}{15}{subsection.5.4}%
+\contentsline {section}{\numberline {6}Entropia na przykładzie powyższych prawdopodobieństw}{16}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Entropia dla impulsu prostokątnego}{16}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Entropia dla impulsu rosnącego wykładniczego}{17}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Entropia dla impulsu malejącego wykładniczego}{17}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Entropia dla impulsu gaussowskiego}{18}{subsection.6.4}%
+\contentsline {section}{\numberline {7}Splątanie kwantowe}{18}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Stany kwantowe}{18}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Separowalność stanu mieszanego}{19}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Jak wykryć splątanie?}{20}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Aktualne limity wykrywania splątania}{20}{subsection.7.4}%
+\contentsline {section}{\numberline {8}Podziękowania}{21}{section.8}%
