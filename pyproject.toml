@@ -1,5 +1,5 @@
 [project]
-name = "pracownia-rotacyjna"
+name = "quantum-pulse-analysis"
 version = "0.1.0"
 description = "Computational physics simulations studying quantum systems, focusing on entropy calculations and pulse analysis"
 readme = "README.md"
@@ -16,7 +16,7 @@ dependencies = [
 ]
 
 [project.urls]
-Repository = "https://github.com/Kubabob/pracownia_rotacyjna"
+Repository = "https://github.com/Kubabob/quantum-pulse-analysis"
 
 [build-system]
 requires = ["setuptools>=61.0"]

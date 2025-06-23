@@ -62,6 +62,9 @@ The project includes:
 ├── impulsy.ipynb            # Pulse analysis notebook
 ├── sprawozdanie.pdf         # Compiled report
 ├── sprawozdanie.tex         # LaTeX source of the report
+├── sprawozdanie/            # Report files
+│   ├── sprawozdanie.pdf     # Compiled report
+│   ├── sprawozdanie.tex     # LaTeX source of the report
 ├── graphics/                # Visualization files
 │   ├── entropia/            # Entropy visualizations
 │   ├── impulsy/             # Pulse type visualizations
