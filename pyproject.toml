@@ -1,0 +1,23 @@
+[project]
+name = "pracownia-rotacyjna"
+version = "0.1.0"
+description = "Computational physics simulations studying quantum systems, focusing on entropy calculations and pulse analysis"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Jakub Bożek"}
+]
+dependencies = [
+    "numpy>=1.24.0",
+    "scipy>=1.11.0",
+    "matplotlib>=3.7.0",
+    "jupyter>=6.5.0",
+]
+
+[project.urls]
+Repository = "https://github.com/Kubabob/pracownia_rotacyjna"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
